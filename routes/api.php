@@ -19,5 +19,6 @@ Route::group(['namespace' => 'App\Http\Controllers\API'], function () {
     Route::apiResource('category', 'Category\CategoryController');
     Route::apiResource('tag', 'Tag\TagController');
 
+    //ٌRoute for filter by (tag & category) and get all ads OR advertiser ads
     Route::get('ads/{advertiser_id?}',"Ads\AdsController@ads");
 });

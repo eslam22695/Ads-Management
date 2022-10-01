@@ -23,7 +23,7 @@ class CreateAdsTable extends Migration
             $table->date('start_date');
 
             $table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('advertiser_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('advertiser_id')->references('id')->on('advertisers')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
